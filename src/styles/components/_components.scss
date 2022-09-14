@@ -1,0 +1,23 @@
+/*
+    Components imports
+*/
+
+@import 'layout';
+@import 'button';
+@import 'field';
+@import 'input';
+@import 'card';
+@import 'lessons-list';
+@import 'tag';
+@import 'upload';
+@import 'navbar';
+@import 'icons';
+@import 'alert';
+@import 'map';
+
+//must load after base imports
+@import 'content';
+
+/*
+    End of components imports
+*/

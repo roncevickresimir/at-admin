@@ -1,0 +1,12 @@
+/*
+    utils: position
+*/
+
+.pos {
+    &--rel {
+        position: relative;
+    }
+    &--abs {
+        position: absolute;
+    }
+}

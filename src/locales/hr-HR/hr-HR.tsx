@@ -1,0 +1,53 @@
+export const HR_HR = {
+    PATHS: {
+        LOGIN: '/hr/login',
+        DASHBOARD: '/hr/glavna-ploca',
+    },
+    LOGIN: {
+        TITLE: 'Prijava',
+        FORM: {
+            EMAIL: 'Email ili Korisničko ime',
+            EMAIL_PLACEHOLDER: 'Unesite Email ili Korisničko ime',
+            PASSWORD: 'Unesite svoju lozinku',
+            PASSWORD_PLACEHOLDER: 'Unesite svoju lozinku',
+            SUBMIT_BTN: 'Prijava',
+        },
+        FORGOT_PASSWORD: 'Zaboravili ste lozinku?',
+        ACCOUNT: 'Nemate korisnički račun?',
+        REGISTER: 'Registracija',
+    },
+    FORM_VALIDATION: {
+        INVALID_EMAIL: 'Neispravan email',
+        INVALID_IMAGE: 'Slika mora biti formata jpg,png,jpeg ili svg i manja od 2MB veličine.',
+        IMAGE_TYPE: 'Slika mora biti formata jpg,png,jpeg ili svg',
+        IMAGE_SIZE: 'Slika mora biti manja od 2MB veličine.',
+        TOO_SHORT: 'Pretratko!',
+        TOO_LONG: 'Predugo!',
+        TOO_BIG: 'Broj je prevelik',
+        REQUIRED: 'Ovo polje je neophodno',
+        LOWERCASE: 'Uključiti barem jedno malo slovo (a-z)',
+        UPPERCASE: 'Uključiti barem jedno veliko slovo (A-Z)',
+        NUMBER: 'Uključiti barem jednu brojku (0-9)',
+        MIN_CHARACTERS: 'Biti najmanje 8 znakova',
+        SPECIAL_CHAR: 'Uključiti bare jedan posebni znak (@, $, !, %, *, ?, &...)',
+        PASSWORD_MUST: 'Lozinka mora',
+        PASSWORD_MATCH: 'Lozinke se moraju poklapati',
+        PASSWORD_STRENGTH: 'Lozinka mora ispunjavati uvjete',
+        PRICE: 'Cijena ne može biti ispod 60',
+        FUTURE_DATE: 'Datum ne može biti u budućnosti',
+        PHONE_NUMBER: 'Neispravan broj telefona',
+        TUTOR_AGE: 'Instruktor mora imati više od 18 godina',
+        WRONG_REQUIREMENTS: 'Niste ispunili sva potrebna polja',
+        NEGATIVE: 'Ne može biti negativan broj',
+        USERNAME_EXIST: 'Korisničko ime već postoji',
+        TOAST: {
+            UPDATE: 'Uspješno ste ažurirali podatke djeteta',
+            CREATE: 'Uspješno ste dodali dijete',
+            DELETE: 'Uspješno ste uklonili dijete',
+        },
+    },
+    DASHBOARD: {
+        TITLE: 'Upravljačka ploča',
+    },
+    WATERMARK: '© DreamQuest'
+};

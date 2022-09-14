@@ -1,0 +1,93 @@
+/*
+    components: icons
+*/
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: $color-text-primary;
+    mask-repeat: no-repeat;
+    mask-position: 50%;
+    transition: background-color 300ms ease-in-out;
+
+    //icon sizes
+    &--ty {
+        width: calc(#{$unit} * 3);
+        height: calc(#{$unit} * 3);
+    }
+    &--xs {
+        width: calc(#{$unit} * 4);
+        height: calc(#{$unit} * 4);
+    }
+    &--sm {
+        width: calc(#{$unit} * 5);
+        height: calc(#{$unit} * 5);
+    }
+    &--base {
+        width: calc(#{$unit} * 6);
+        height: calc(#{$unit} * 6);
+    }
+    &--md {
+        width: calc(#{$unit} * 8);
+        height: calc(#{$unit} * 8);
+    }
+    &--lg {
+        width: calc(#{$unit} * 10);
+        height: calc(#{$unit} * 10);
+    }
+
+    //position
+    &--pos {
+        &--dropdown {
+            pointer-events: none;
+            position: absolute;
+            top: calc(#{$unit} * 2);
+            right: calc(#{$unit} * 2);
+        }
+    }
+
+    //icons
+    &--logout {
+        mask-image: url('../../assets/icons/logout.svg');
+    }
+    &--show {
+        mask-image: url('../../assets/icons/show.svg');
+    }
+    &--visible {
+        mask-image: url('./../../assets/icons/visible.svg');
+    }
+    &--hide {
+        mask-image: url('../../assets/icons/hide.svg');
+    }
+    &--upload {
+        mask-image: url('../../assets/icons/upload.svg');
+    }
+    //flags
+
+    //color modifiers
+    &--primary {
+        background-color: $color-primary;
+    }
+
+    &--primary-gradient {
+        background: $color-primary;
+        background: linear-gradient(226.69deg, rgba(127, 95, 211, 0.9) 4.52%, #5c3ee8 94.64%);
+    }
+
+    &--grey {
+        background-color: $grey-bb;
+    }
+
+    &--white {
+        background-color: $white;
+    }
+
+    &--black {
+        background-color: $black;
+    }
+
+    &--success {
+        background-color: $color-success;
+    }
+}

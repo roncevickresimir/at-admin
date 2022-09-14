@@ -1,0 +1,12 @@
+/*
+    utils: overflow.scss;
+*/
+
+.overflow {
+    &--auto {
+        overflow: auto;
+    }
+    &--hidden {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,74 @@
+/*
+    components: modal.scss
+*/
+
+.alert {
+    z-index: 11;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    //handle if modal is higher than view height
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid hsla(248, 86%, 69%, 0.5);
+    border-radius: $border-rounded;
+    padding: calc(#{$unit} * 6);
+
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.05);
+    overflow: visible;
+
+    animation: entry .2s ease forwards;
+    @keyframes entry {
+        0% {
+            transform: scale(1) translate(-50%, -50%);
+        }
+        60% {
+            transform: scale(1.05) translate(-49%, -49%);
+        }
+        100%{
+            transform: scale(1) translate(-50%, -50%);
+        }
+    }
+    &__head {
+        position: relative;
+        padding: 4px;
+        background: $white;
+        border-radius: 100%;
+        margin-top: -50px;
+
+        &__icon {
+            color: $color-success; // change svg
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__overlay {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background-color: $background-overlay;
+    }
+}
