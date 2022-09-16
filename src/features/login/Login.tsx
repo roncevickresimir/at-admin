@@ -12,7 +12,7 @@ import { getUserRoleAbrv } from "../../app/utils/getUserData";
 import TextField from "../components/form/TextField";
 
 import logo from "../../assets/logo.png";
-import heroImg from "../../assets/images/hero.avif";
+import heroImg from "../../assets/images/hero.jpg";
 import { Role } from "../../lookups/role";
 
 interface Values {
