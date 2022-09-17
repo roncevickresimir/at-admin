@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 import { RootState } from "./store";
 
-export const apiUrl = `${process.env.REACT_APP_SCHEMA}://${process.env.REACT_APP_HOST}:${process.env.REACT_APP_API_PORT}/${process.env.REACT_APP_API}/`;
+export const apiUrl = `${process.env.REACT_APP_SCHEMA}://${process.env.REACT_APP_API}:${process.env.REACT_APP_API_PORT}/questing/`;
 
 export const baseService = createApi({
   baseQuery: fetchBaseQuery({
