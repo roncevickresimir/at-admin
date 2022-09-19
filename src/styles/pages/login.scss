@@ -5,23 +5,101 @@
 .login {
     display: flex;
     height: 100vh;
+    position: relative;
+
+    @media (max-width: 1100px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &__aside {
         width: 55%;
         background-color: $grey-fc;
         border-right: 1px dashed $grey-ed;
 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        background-color: transparent;
+
+        
+
         @media (max-width: 1450px) {
             width: 40%;
         }
         @media (max-width: 1100px) {
-            width: 0%;
+            width: 100%;
+            order: 1;
         }
 
-        img {
+        & > img {
             height: 100vh;
             width: 100%;
             object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+        
+        .download {
+            background-color: $color-secondary;
+            border-radius: 20px;
+            min-height: 300px;
+
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+
+            & > div:first-of-type {
+                div {
+                    max-width: 500px;
+                    min-width: 170px;
+                }
+            }
+            & > div:last-of-type {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                width: 50%;
+                max-width: 700px;
+                margin-top: -15%;
+
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            
+            @media (max-width: 1450px) {
+                flex-wrap: wrap;
+                margin-bottom: 125px;
+
+                & > div {
+                    width: 100%;
+                    padding: 0;
+                }
+
+                & > div:first-of-type > div:nth-of-type(3) {
+                    flex-wrap: wrap;
+                    width: 100%;
+
+                    & > div:first-of-type {
+                        margin: 0 0 12px;
+                    }
+
+                    & > div {
+                        width: 100%;
+                    }
+                }
+                & > div:last-of-type {
+                    width: 100%;
+                    margin-bottom: -40%;
+                    margin-top: 40px;
+                }
+            }
         }
     }
 
@@ -30,6 +108,7 @@
         flex-direction: column;
         width: 45%;
         overflow-y: auto;
+        background-color: $grey-fc;
 
         @media (max-width: 1450px) {
             width: 60%;

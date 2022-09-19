@@ -3,9 +3,53 @@
 */
 
 // Importing fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lato:wght@300;400;700;900&display=swap');
+@font-face {
+    font-family: 'WalsheimPro';
+    src: url('../../assets/fonts/WalsheimPro/GTWalsheimPro-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+}
 
+@font-face {
+font-family: 'WalsheimPro';
+src: url('../../assets/fonts/WalsheimPro/GTWalsheimPro-Light.ttf') format('truetype');
+font-weight: 250;
+}
+
+@font-face {
+font-family: 'WalsheimPro';
+src: url('../../assets/fonts/WalsheimPro/GTWalsheimPro-Thin.ttf') format('truetype');
+font-weight: 300;
+}
+
+@font-face {
+font-family: 'WalsheimPro';
+src: url('../../assets/fonts/WalsheimPro/GTWalsheimPro-Regular.ttf');
+font-weight: 400;
+}
+
+@font-face {
+font-family: 'WalsheimPro';
+src: url('../../assets/fonts/WalsheimPro/GTWalsheimPro-Bold.ttf') format('truetype');
+font-weight: 500;
+}
+
+@font-face {
+font-family: 'WalsheimPro';
+src: url('../../assets/fonts/WalsheimPro/GTWalsheimPro-Black.ttf') format('truetype');
+font-weight: 800;
+}
+
+@font-face {
+font-family: 'WalsheimPro';
+src: url('../../assets/fonts/WalsheimPro/GTWalsheimPro-CondensedThin.ttf') format('truetype');
+font-weight: 100;
+}
 // Global style
+* {
+    font-family: 'WalsheimPro';
+    font-weight: 400;
+}
+
 h1,
 h2,
 h3,

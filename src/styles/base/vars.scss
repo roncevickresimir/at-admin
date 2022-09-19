@@ -28,19 +28,21 @@ $grey-f7: #f7f7f7;
 $grey-fb: #fbfbfb;
 $grey-fc: #fcfcfc;
 
+$grey: #F8F8F8;
+
 //background colors
 $black: #000;
-$white: #fff;
-$background-color: #f8f7fa;
+$white: #FFFFFF;
+$background-color: #EEEEEE;
 $background-overlay: #061129b3;
 $sidebar-overlay: #8f8f8f;
 
 //main colors
-$color-primary: #6CD9A6;
-$color-primary-light: #83fdd0;
+$color-primary: #FF9254;
+$color-primary-light: #ffa46f;
 $color-primary-lighter: #7ed9c84b;
 $color-primary-bright: #F2F2F2;
-$color-secondary: #94E9F2;
+$color-secondary: #101236;
 
 $color-success: #2ecc71;
 $color-error: #D98371;
@@ -59,10 +61,10 @@ $border-circle: 1000px;
 
 // TYPOGRAPHY
 //---------------------------------------------------------
-$color-text-primary: $grey-30;
+$color-text-primary: #101236;
 $color-text-placeholder: $grey-d8;
-$color-text-secondary: $grey-63;
-$color-text-tertiary: $grey-bb;
+$color-text-secondary: #FF9254;
+$color-text-tertiary: #9FA0AF;
 
 $type-ty: 9px;
 $type-xs: 10px;
@@ -81,6 +83,7 @@ $responsive-sm: 576px;
 $responsive-md: 768px;
 $responsive-lg: 992px;
 $responsive-xl: 1200px;
+$responsive-xxl: 1920px;
 
 //spacers building configs
 $modifiers: (
@@ -96,6 +99,7 @@ $responsiveConfig: (
     $responsive-md: 'md',
     $responsive-lg: 'lg',
     $responsive-xl: 'xl',
+    $responsive-xxl: 'xxl',
 );
 
 // FLUID TYPOGRAPHY

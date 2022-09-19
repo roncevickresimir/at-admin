@@ -12,9 +12,10 @@ import { getUserRoleAbrv } from "../../app/utils/getUserData";
 import TextField from "../components/form/TextField";
 
 import logo from "../../assets/logo.png";
-import heroImg from "../../assets/images/hero.jpg";
 import { Role } from "../../lookups/role";
 
+import heroImg from "../../assets/images/hero.jpg";
+import traveler from "../../assets/images/traveler.png";
 interface Values {
   email: string;
   password: string;
@@ -89,6 +90,38 @@ const Login: React.FC = () => {
       <div className="login">
         <div className="login__aside">
           <img src={heroImg} alt="Hero Img" />
+          <div className="download flex flex--center w--100 h--100 mt-20 p-12">
+            <div className="flex flex--col pr-12 w--50">
+              <div className="type type--xxl type--lh-1 type--color--white mb-5">
+                Here by mistake?
+              </div>
+              <div className="type type--lg type--lh-1 type--color--white type--wgt--bold mb-5">
+                <a
+                  className="type type--lg type--lh-1 type--color--secondary type--wgt--bold mb-5"
+                  href="https://avantorist.eu"
+                >
+                  Visit web
+                </a>{" "}
+                or get the app
+              </div>
+
+              <div className="flex mt-6">
+                <div className="type type--wgt--bold btn btn--primary flex flex--center flex--jc--center mr-4 pl-6 pr-6 pt-3 pb-3">
+                  Get on AppStore
+                </div>
+                <div className="type type--wgt--bold btn btn--ghost btn btn--ghost--white flex flex--center flex--jc--center pl-6 pr-6 pt-3 pb-3">
+                  Get on PlayStore
+                </div>
+              </div>
+            </div>
+            <div>
+              <img
+                className="w--100"
+                src={traveler}
+                alt="traveler explorer tourist"
+              ></img>
+            </div>
+          </div>
         </div>
         <div className="login__content">
           <div className="flex--grow w--448--max">
