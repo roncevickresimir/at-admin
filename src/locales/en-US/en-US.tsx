@@ -160,5 +160,5 @@ export const EN_US = {
     QUESTS: "Quests",
     PREMIUM: "Premium",
   },
-  WATERMARK: "© DreamQuest",
+  WATERMARK: "© AvanTourist",
 };

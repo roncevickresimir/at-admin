@@ -98,7 +98,7 @@ const Login: React.FC = () => {
               <div className="type type--lg type--lh-1 type--color--white type--wgt--bold mb-5">
                 <a
                   className="type type--lg type--lh-1 type--color--secondary type--wgt--bold mb-5"
-                  href="https://avantorist.eu"
+                  href="https://avantourist.eu"
                 >
                   Visit web
                 </a>{" "}
