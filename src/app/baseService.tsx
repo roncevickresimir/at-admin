@@ -14,7 +14,6 @@ export const baseService = createApi({
         headers.set("authorization", `Bearer ${token}`);
       }
 
-      headers.set("Access-Control-Allow-Origin", "*");
       return headers;
     },
   }),
