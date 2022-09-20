@@ -10,6 +10,9 @@ $mobile-height: 50px;
 
     @media (max-width: $responsive-md) {
         flex-direction: column;
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     &__aside {
@@ -30,7 +33,8 @@ $mobile-height: 50px;
             bottom: 0;
             left: -100vw;
             width: 100vw;
-            transition: left 300ms ease-in-out;
+            transition: left 150ms ease-in;
+            z-index: 99;
 
             &.active {
                 left: 0;
@@ -38,6 +42,15 @@ $mobile-height: 50px;
 
             &__close {
                 display: block;
+                position: absolute;
+                top: calc($unit * 8);
+                right: calc($unit * 8);
+                transform: rotate(-180deg);
+                transition: all 350ms ease-out;
+
+                &.active {
+                    transform: rotate(0);
+                }
             }
         }
     }
@@ -51,7 +64,9 @@ $mobile-height: 50px;
         padding: calc(#{$unit} * 4);
         border-bottom: 1px solid $border-color;
 
-        background-color: $color-primary;
+        background-color: $white;
+        padding-top: 40px;
+        padding-bottom: 40px;
         color: $white;
 
         @media (max-width: $responsive-md) {
@@ -68,6 +83,9 @@ $mobile-height: 50px;
 
         @media (max-width: $responsive-md) {
             height: calc(100vh - #{$mobile-height});
+            @media (max-width: $responsive-md) {
+                padding: calc(#{$unit} * 2);
+            }
         }
     }
 
@@ -133,7 +151,7 @@ $mobile-height: 50px;
                 display: flex;
                 flex-direction: column;
                 flex-shrink: 0;
-                width: 300px;
+                width: 400px;
                 /*margin-left: calc(#{$unit} * 6);*/
 
                 @media (max-width: $responsive-lg) {

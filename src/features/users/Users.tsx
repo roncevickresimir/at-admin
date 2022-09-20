@@ -107,7 +107,7 @@ const Users = () => {
                 <UserForm user={activeUser} refresh={fetchData} />
               </div>
             </div>
-            <div className="card--lessons__body__main flex">
+            {/*<div className="card--lessons__body__main flex">
               {activeUser ? (
                 <div className="flex--primary flex--jc--center flex--col w--100">
                   <img src={noResults} />
@@ -125,7 +125,7 @@ const Users = () => {
                   </div>
                 </>
               )}
-            </div>
+              </div>*/}
           </div>
         </div>
       </MainWrapper>

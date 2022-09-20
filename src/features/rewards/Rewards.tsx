@@ -105,7 +105,7 @@ const Rewards = () => {
                 <RewardForm activeReward={activeReward} refresh={fetchData} />
               </div>
             </div>
-            <div className="card--lessons__body__main flex">
+            {/*<div className="card--lessons__body__main flex">
               {activeReward ? (
                 <div className="flex--primary flex--jc--center flex--col w--100">
                   <img src={noResults} />
@@ -123,7 +123,7 @@ const Rewards = () => {
                   </div>
                 </>
               )}
-            </div>
+            </div>*/}
           </div>
         </div>
       </MainWrapper>

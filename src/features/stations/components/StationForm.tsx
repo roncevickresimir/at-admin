@@ -13,16 +13,18 @@ import {
   useDeleteStationMutation,
   useUpdateStationMutation,
 } from "../../../services/stationService";
-import Categories from "../../../lookups/categories";
 import Alert from "../../components/alert";
 import { useEffect, useState } from "react";
+import { useLazyGetCategoriesQuery } from "../../../services/categoryService";
+import useCategories, { getCategoryById } from "../../../lookups/categories";
 
 const StationForm: any = (props: any) => {
-  const { t } = useTranslation();
-
   const { activeStation, loading, refresh } = props;
-
   const station = activeStation;
+
+  const { t } = useTranslation();
+  const [alert, setAlert] = useState<string | boolean>();
+  const [categoryOptions, setCategoryOptions] = useState<any>(useCategories);
 
   const [
     createStation,
@@ -36,9 +38,7 @@ const StationForm: any = (props: any) => {
     deleteStation,
     { isSuccess: deleteStationSuccess, isError: deleteStationError },
   ] = useDeleteStationMutation();
-  const [alert, setAlert] = useState<string | boolean>();
-
-  const categoryOptions = Categories;
+  const [getCategories] = useLazyGetCategoriesQuery();
 
   const initialValues: IStation = {
     id: station?.id || "",
@@ -89,9 +89,26 @@ const StationForm: any = (props: any) => {
         });
   };
 
+  const fetchData = async () => {
+    const getCategoriesResponse = await getCategories(null).unwrap();
+
+    let tCategories: any = [];
+    getCategoriesResponse.forEach((c: any) => {
+      tCategories.push({
+        label: c.name,
+        value: c.id,
+      });
+    });
+    setCategoryOptions(tCategories);
+  };
+
   const handleDeleteStation = async () => {
     await deleteStation(station?.id);
   };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   useEffect(() => {
     if (createStationSuccess || updateStationSuccess || deleteStationSuccess) {

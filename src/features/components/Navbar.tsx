@@ -24,7 +24,8 @@ const Navbar = () => {
     <div className="navbar">
       <NavLink className="d--b flex flex--center" to={t(PATHS.QUESTS)}>
         <img className="navbar__logo" src={logo} alt="logo" />
-        <div className="type--wgt--bold type--color--secondary">DreamQuest</div>
+        <div className="type--wgt--bold type--color--secondary">Avan</div>
+        <div className="type--wgt--bold type--color--primary">Tourist</div>
       </NavLink>
       <div className="flex--grow">
         <RenderMenuLinks></RenderMenuLinks>

@@ -112,7 +112,7 @@ const CompletedLessons = () => {
               </div>
             </div>
             <div className="card--lessons__body__main flex">
-              <div className="flex--primary w--50">
+              <div className="flex--primary w--100">
                 <QuestForm quest={activeQuest} refresh={fetchData} />
               </div>
             </div>

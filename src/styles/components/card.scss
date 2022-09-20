@@ -81,6 +81,14 @@
         border-radius: $border-rounded;
         margin: calc(#{$unit} * 6);
         border: 1px solid $grey-f5;
+        width: fit-content;
+        height: auto;
+
+        @media (max-width: $responsive-md) {
+            margin: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
 
         &__head {
             z-index: 9;
@@ -101,16 +109,31 @@
             display: flex;
             height: calc(100%);
 
+            @media (max-width: $responsive-md) {
+                display: flex;
+                flex-direction: column;
+            }
+
             &__aside {
                 width: 360px;
                 flex-shrink: 0;
                 border-right: 1px solid $grey-ed;
                 overflow-y: auto;
+
+                @media (max-width: $responsive-md) {
+                    width: 100%;
+                    border-right: 0px;
+                }
             }
             &__main {
                 flex-grow: 1;
                 padding: calc(#{$unit} * 10) calc(#{$unit} * 14);
                 overflow-x: scroll;
+                
+                @media (max-width: $responsive-md) {
+                    padding: 0;
+                    width: 100%;
+                }
             }
         }
     }

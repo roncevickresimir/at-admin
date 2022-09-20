@@ -13,19 +13,11 @@ export const baseService = createApi({
       if (token) {
         headers.set("authorization", `Bearer ${token}`);
       }
+
+      headers.set("Access-Control-Allow-Origin", "*");
       return headers;
     },
   }),
-  tagTypes: [
-    "userAvailability",
-    "tutorBookings",
-    "bookings",
-    "tutor-unavailability",
-    "notifications",
-    "upcomingLessons",
-    "notificationsUnread",
-    "lessonCount",
-    "child",
-  ],
+  tagTypes: [],
   endpoints: () => ({}),
 });
