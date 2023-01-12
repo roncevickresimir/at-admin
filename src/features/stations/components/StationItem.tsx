@@ -23,7 +23,10 @@ const StationItem = (props: Props) => {
       {station.images.length && (
         <img
           className="lessons-list__item__img"
-          src={`http://${station.images[0]?.filePath}`}
+          src={`https://${station.images[0]?.filePath.replace(
+            "undefined:3000",
+            process.env.REACT_APP_API
+          )}`}
           alt="station"
         />
       )}
